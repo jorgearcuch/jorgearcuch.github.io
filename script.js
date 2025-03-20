@@ -5,24 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch(url)
         .then(response => {
-            console.log("Estado de la respuesta:", response.status); 
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            console.log("Respuesta de la API:", data);
-
             if (data.status !== "ok") {
-                throw new Error("Error en la API: " + data.message);
+                throw new Error("Error en la API: " + (data.message || "Respuesta inesperada"));
             }
-
             if (!data.articles || data.articles.length === 0) {
                 newsContainer.innerHTML = "<p class='text-center'>No se encontraron noticias.</p>";
                 return;
             }
-
             newsContainer.innerHTML = `
                 <ul class="list-group">
                     ${data.articles.slice(0, 10).map(article => `
