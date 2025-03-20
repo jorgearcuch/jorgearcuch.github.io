@@ -15,7 +15,10 @@
                     <p><strong>Major:</strong> Industrial engineering</p>
                     <p><strong>Year of University Enrollment:</strong> 2022</p>
                     <p><strong>Github:</strong> <a href="https://github.com/jorgearcuch" target="_blank">jorgearcuch</a></p>
-                    <img src="Imagen.jpg"  alt="graficos" width="150" height="100"><img> 
+                    <div class="card" style="width: 18rem;"> 
+                        <img src="Imagen.jpg" class="card-img-top" alt="graficos" width="150" height="100">
+                      </div>
+                      
 
                     <h2>About me</h2>
                     <p>I have a strong sense of responsibility and honesty, and a knack for teamwork and leadership. Furthermore, sports play an important role in my life, so I transfer the values ​​it provides to my work environment to facilitate progress toward a common goal and learn how to best deal with adverse situations.</p>
@@ -39,12 +42,12 @@
                     </table>
                     <div class="cambio">
                         <input type="text" id="userInput" placeholder="Enter a message">
-                        <button onclick="updateSection()">Update </button>
+                        <button type="button" class="btn btn-warning" onclick="updateSection()">Primary</button>
                         <p id="dynamic-section">This section will change.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <h1 class="text-center mb-4">Tesla News</h1>
+                    <h1>Tesla News<span class="badge text-bg-secondary">BREAKING</span></h1>
                     <div id="news"></div>
                 </div>
                 </div>
